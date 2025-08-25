@@ -191,6 +191,7 @@ function setupDrugsListPage(drugs, mode = 'masonry') {
                 if (!columnToPlace)
                     return;
 
+                //Yes
                 var newCell = document.createElement('div');
                 newCell.classList.add('masonry-cell');
                 const headerSection = document.createElement('div');
