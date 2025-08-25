@@ -1,4 +1,4 @@
-import { remainingEventCount } from "../events/events";
+import { remainingEventCount } from "../events/event-manager";
 import { loadedSheets } from "../main";
 
 //Pages 

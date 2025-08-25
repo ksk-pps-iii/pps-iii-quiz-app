@@ -1,5 +1,5 @@
 import { transformDataArray } from "../config/constants";
-import { appendEvent } from "../events/events";
+import { appendEvent } from "../events/event-manager";
 import { postCloudData } from "../gg-sheet";
 import { loadedSheets } from "../main";
 import { createModalWindow } from "./modals";

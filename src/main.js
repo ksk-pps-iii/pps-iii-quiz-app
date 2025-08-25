@@ -1,4 +1,4 @@
-import { appendEvent } from "./events/events";
+import { appendEvent } from "./events/event-manager";
 import { postCloudData } from "./gg-sheet";
 import { getModal_sectionDrugsSettings } from "./sections/sc_drugs";
 import { openLoadSheetSection } from "./views/load-sheets-settings";
