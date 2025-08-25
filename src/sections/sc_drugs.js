@@ -1,4 +1,4 @@
-import { domainTransformations } from "../config/constants";
+import { domainTransformations } from "../config/Constants";
 import { loadedSheets } from "../main";
 import { closeModalByName, createModalWindow } from "../views/modals";
 import { openPage } from "../views/pages";

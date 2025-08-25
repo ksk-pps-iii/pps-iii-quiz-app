@@ -1,6 +1,6 @@
-import { transformDataArray } from "../config/constants";
-import { appendEvent } from "../events/event-manager";
-import { postCloudData } from "../gg-sheet";
+import { transformDataArray } from "../config/Constants";
+import { appendEvent } from "../events/Event_Manager";
+import { postCloudData } from "../gg_sheets";
 import { loadedSheets } from "../main";
 import { createModalWindow } from "./modals";
 import { manageSectionButtons } from "./pages";

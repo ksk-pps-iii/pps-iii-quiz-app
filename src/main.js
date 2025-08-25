@@ -1,5 +1,5 @@
-import { appendEvent } from "./events/event-manager";
-import { postCloudData } from "./gg-sheet";
+import { appendEvent } from "./events/Event_Manager";
+import { postCloudData } from "./gg_sheets";
 import { getModal_sectionDrugsSettings } from "./sections/sc_drugs";
 import { openLoadSheetSection } from "./views/load-sheets-settings";
 import { manageSectionButtons } from "./views/pages";
