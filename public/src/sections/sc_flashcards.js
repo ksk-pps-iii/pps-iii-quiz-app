@@ -191,8 +191,22 @@ function setupFlashcardsPage(drugs) {
     flashcard.ondragstart = ev => {
         fcDragOrigin = ev.clientX;
     }
+    flashcard.ontouchstart = ev => {
+        fcDragOrigin = ev.touches[0].clientX;
+    }
     flashcard.ondragend = ev => {
         var dragDelta = ev.clientX - fcDragOrigin;
+        if (Math.abs(dragDelta) >= minDragThreshold) {
+            if (dragDelta < 0) {
+                funcCycleDrug(1);
+            }
+            else {
+                funcCycleDrug(-1);
+            }
+        }
+    }
+    flashcard.ontouchend = ev => {
+        var dragDelta = ev.touches[0].clientX - fcDragOrigin;
         if (Math.abs(dragDelta) >= minDragThreshold) {
             if (dragDelta < 0) {
                 funcCycleDrug(1);
