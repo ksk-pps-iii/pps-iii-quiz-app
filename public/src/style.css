@@ -88,6 +88,12 @@
     gap: 4px;
 }
 
+.btn-unavai {
+    background-color: gray !important;
+    font-style: italic;
+    font-weight: 100 !important;
+}
+
 /*Area*/
 .area-horizontal {
     display: flex;  
