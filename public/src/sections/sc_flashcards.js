@@ -185,6 +185,24 @@ function setupFlashcardsPage(drugs) {
         flashcard.classList.toggle('is-flipped');
     };
 
+    flashcard.draggable = true;
+    const minDragThreshold = 100;
+    var fcDragOrigin = null;
+    flashcard.ondragstart = ev => {
+        fcDragOrigin = ev.clientX;
+    }
+    flashcard.ondragend = ev => {
+        var dragDelta = ev.clientX - fcDragOrigin;
+        if (Math.abs(dragDelta) >= minDragThreshold) {
+            if (dragDelta < 0) {
+                funcCycleDrug(1);
+            }
+            else {
+                funcCycleDrug(-1);
+            }
+        }
+    }
+
     var currentDrugIndex = null;
     const funcCycleDrug = amount => {
         currentDrugIndex = currentDrugIndex + amount;
