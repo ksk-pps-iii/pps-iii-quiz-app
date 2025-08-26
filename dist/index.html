@@ -18,8 +18,8 @@
 
     <!-- Custom CSS -->
 
-  <script type="module" crossorigin src="/assets/index-CAoUq2GG.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-YAeVWC4n.css">
+  <script type="module" crossorigin src="/assets/index-DYfE4TRv.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-Cx-C-Kxb.css">
 </head>
 <body>
     <div id="area-eventloading" class="area-horizontal area-center area-fit-horizontal placement-stick-fixed-top-left placement-top-left-5 hidden">
@@ -37,7 +37,7 @@
                     <div class="material-symbols-outlined icon">mixture_med</div>
                     <div>Drugs</div>
                 </button>
-                <button id='btn-main-drugs' class="btn-normal btn-primary btn-goto-section">
+                <button id='btn-main-flashcards' class="btn-normal btn-primary btn-goto-section">
                     <div class="material-symbols-outlined icon">playing_cards</div>
                     <div>Flashcards</div>
                 </button>
@@ -61,6 +61,44 @@
             </div>
             <div id="txt-drugs-list-header-declared" class="txt-header">All Drugs</div>
             <div id="area-drugs-list-masonry" class="masonry-list area-horizontal area-fill-horizontal"></div>
+        </div>
+
+        <div id="panel-flashcards" class="panel panel-glass area-fill-horizontal area-fill-vertical list-gap-5 hidden">
+            <div class="area-horizontal">
+                <button id="btn-flashcards-back" class="btn-normal area-fit-horizontal">
+                    <span class="material-symbols-outlined icon">arrow_back_ios</span>
+                    <span>Back</span>
+                </button>
+            </div>
+            <div class="flashcard-container [perspective:1000px]">
+                <div id="flashcard" class="flashcard relative transition-transform duration-700 rounded-xl shadow-xl cursor-pointer">
+                    <div id="flashcard-front" class="flashcard-front drug-cont">
+                    </div>
+                    <div id="flashcard-back" class="flashcard-back drug-cont absolute inset-0 ">
+                    </div>
+                </div>
+            </div>
+            <div class="area-horizontal area-fill-horizontal area-fit-horizontal area-newline area-center">
+                <button id="btn-fc-m10" class="btn-normal btn-primary area-center area-fit-horizontal">
+                    <span class="material-symbols-outlined icon">keyboard_double_arrow_left</span>
+                    <span>-10</span>
+                </button>
+                <button id="btn-fc-m1" class="btn-normal btn-primary area-center area-fit-horizontal">
+                    <span class="material-symbols-outlined icon">keyboard_arrow_left</span>
+                    <span>-1</span>
+                </button>
+                <button id="btn-fc-p1" class="btn-normal btn-primary area-center area-fit-horizontal">
+                    <span class="material-symbols-outlined icon">keyboard_arrow_right</span>
+                    <span>+1</span>
+                </button>
+                <button id="btn-fc-p10" class="btn-normal btn-primary area-center area-fit-horizontal">
+                    <span class="material-symbols-outlined icon">keyboard_double_arrow_right</span>
+                    <span>+10</span>
+                </button>
+                <button id="btn-fc-r" class="btn-normal btn-primary area-center area-fit-horizontal">
+                    <span class="material-symbols-outlined icon">shuffle</span>
+                </button>
+            </div>
         </div>
 
         <!--Modals-->

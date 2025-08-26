@@ -4,15 +4,20 @@ import { loadedSheets } from "../main";
 //Pages 
 export const pageMainSelector = document.getElementById('panel-main');
 export const pageDrugList = document.getElementById('panel-drugs-list');
+export const pageFlashcards = document.getElementById('panel-flashcards');
 export function openPage(page) {
     pageMainSelector.classList.add('hidden');
     pageDrugList.classList.add('hidden');
+    pageFlashcards.classList.add('hidden');
 
     if (page === 'main') {
         pageMainSelector.classList.remove('hidden');
     }
     else if (page === 'drugs-list') {
         pageDrugList.classList.remove('hidden');
+    }
+    else if (page === 'flashcards') {
+        pageFlashcards.classList.remove('hidden');
     }
 }
 

@@ -159,6 +159,14 @@
     border: red 1.5px dashed;
 }
 
+.area-newline {
+    flex-wrap: wrap;
+}
+
+.list-gap-5 {
+    gap: 5px;
+}
+
 .placement-stick-top-right-5 {
     position: absolute;
     top: 5px;
@@ -318,7 +326,7 @@
 /*Drugs: Masonry List*/
 .masonry-list {
     width: 100%;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .masonry-column {
@@ -337,7 +345,7 @@
     gap: 2px;
 }
 
-.masonry-cell .drug-number {
+.drug-cont .drug-number {
     background-color: var(--color-primary);
     color: white;
     font-weight: bold;
@@ -347,12 +355,12 @@
     border-radius: 8px;
 }
 
-.masonry-cell .drug-generic-name {
+.drug-cont .drug-generic-name {
     font-weight: bold;
     color: var(--color-primary);
 }
 
-.masonry-cell .drug-area-domain {
+.drug-cont .drug-area-domain {
     border: 1px solid rgb(233, 233, 233);
     border-left-width: 0;
     border-right-width: 0;
@@ -360,7 +368,7 @@
     padding: 3px;
 }
 
-.masonry-cell .drug-domain {
+.drug-cont .drug-domain {
     background-color: rgb(226, 226, 226);
     color: rgb(114, 114, 114);
     font-size: 13px;
@@ -378,4 +386,51 @@
 .drug-domain .material-symbols-outlined {
     font-size: 14px;
     font-variation-settings: 'wght' 600;
+}
+
+/*Page: Flashcards*/
+.flashcard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    background-color: rgb(243, 243, 243);
+    border: 1px dashed rgb(207, 207, 207);
+    padding: 5px;
+}
+
+.flashcard {
+    width: 90%;
+    max-width: 90vw;
+    height: 60vh;
+    transform-style: preserve-3d;
+}
+
+.flashcard-front, .flashcard-back {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(51, 51, 51);
+    border-radius: 13px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden; /* For Safari */
+}
+
+.flashcard-front {
+    justify-items: center !important;
+    justify-content: center;
+    align-items: center;
+}
+
+.flashcard-back {
+    transform: rotateY(180deg);
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.flashcard.is-flipped {
+    transform: rotateY(180deg);
 }

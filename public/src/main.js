@@ -1,6 +1,7 @@
 import { appendEvent } from "./events/Event_Manager";
 import { postCloudData } from "./gg_sheets";
 import { getModal_sectionDrugsSettings } from "./sections/sc_drugs";
+import { getModal_SectionFlashcardsSettings } from "./sections/sc_flashcards";
 import { openLoadSheetSection } from "./views/load-sheets-settings";
 import { manageSectionButtons } from "./views/pages";
 
@@ -36,6 +37,9 @@ document.getElementById('btn-main-drugs').addEventListener('click', () => {
 });
 
 //Button: Flashcard Section
+document.getElementById('btn-main-flashcards').addEventListener('click', () => {
+    getModal_SectionFlashcardsSettings();
+});
 
 
 //Button: Sheet Setting Button

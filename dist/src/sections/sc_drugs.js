@@ -71,7 +71,7 @@ export function getModal_sectionDrugsSettings(){
     modal.appendChild(areaModeSettings);
 
     const btnModeOrdered = document.createElement('button');
-    btnModeOrdered.classList.add('btn-normal', 'btn-working');
+    btnModeOrdered.classList.add('btn-normal', 'btn-working', 'area-fit-horizontal');
     btnModeOrdered.dataset.mode = "ordered";
     btnModeOrdered.dataset.selected = true;
     const btnModeOrderedIcon = document.createElement('span');
@@ -84,7 +84,7 @@ export function getModal_sectionDrugsSettings(){
     areaModeSettings.appendChild(btnModeOrdered);
 
     const btnModeRandom = document.createElement('button');
-    btnModeRandom.classList.add('btn-normal');
+    btnModeRandom.classList.add('btn-normal', 'area-fit-horizontal');
     btnModeRandom.dataset.mode = "randomized";
     btnModeRandom.dataset.selected = false;
     const btnModeRandomIcon = document.createElement('span');
@@ -193,7 +193,7 @@ function setupDrugsListPage(drugs, mode = 'masonry') {
 
                 //Yes
                 var newCell = document.createElement('div');
-                newCell.classList.add('masonry-cell');
+                newCell.classList.add('masonry-cell', 'drug-cont');
                 const headerSection = document.createElement('div');
                 headerSection.classList.add('area-fill-horizontal', 'area-horizontal');
                 newCell.appendChild(headerSection);
